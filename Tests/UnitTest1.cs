@@ -6,6 +6,12 @@ namespace Tests
     [TestClass]
     public class UnitTest1
     {
+        [TestInitialize]
+        public void Setup()
+        {
+            Browser.Initialize();
+        }
+
         [TestMethod]
         public void CanGoToHomePage()
         {

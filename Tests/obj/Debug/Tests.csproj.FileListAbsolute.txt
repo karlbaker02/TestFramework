@@ -7,3 +7,5 @@ C:\Projects\TestFramework\Tests\obj\Debug\Tests.dll
 C:\Projects\TestFramework\Tests\obj\Debug\Tests.pdb
 C:\Projects\TestFramework\Tests\bin\Debug\WebDriver.dll
 C:\Projects\TestFramework\Tests\bin\Debug\WebDriver.xml
+C:\Projects\TestFramework\Tests\bin\Debug\WebDriver.Support.dll
+C:\Projects\TestFramework\Tests\bin\Debug\WebDriver.Support.xml

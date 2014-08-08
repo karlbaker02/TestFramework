@@ -5,16 +5,26 @@ namespace TestFramework
 {
     public static class Browser
     {
-        static readonly IWebDriver _webDriver = new FirefoxDriver();
+        private static IWebDriver _webDriver;
 
         public static string Title
         {
             get { return _webDriver.Title; }
         }
 
+        public static ISearchContext Driver
+        {
+            get { return _webDriver; }
+        }
+
         public static void GoTo(string url)
         {
             _webDriver.Url = url;
+        }
+
+        public static void Initialize()
+        {
+            _webDriver = new FirefoxDriver();
         }
 
         public static void Close()

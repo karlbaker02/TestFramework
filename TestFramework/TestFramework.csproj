@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorPage.cs" />
     <Compile Include="Browser.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="HomePage.cs" />
