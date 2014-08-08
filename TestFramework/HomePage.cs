@@ -4,27 +4,26 @@ using System.Collections.Generic;
 
 namespace TestFramework
 {
-    public class HomePage
+    public class HomePage : Page
     {
-        private const string Url = "http://pluralsight.com";
-
         [FindsBy(How = How.LinkText, Using = "Authors")]
         private IWebElement authorsLink;
 
-        private static readonly List<string> PageTitle = new List<string>()
+        protected override string Url
         {
-            "Pluralsight",
-            "Pluralsight – Hardcore Developer and IT Training" // AB Test Variant
-        };
-
-        public void GoTo()
-        {
-            Browser.GoTo(Url);
+            get { return "http://pluralsight.com"; }
         }
 
-        public bool IsAt()
+        protected override List<string> PageTitle
         {
-            return PageTitle.Contains(Browser.Title);
+            get
+            {
+                return new List<string>()
+                {
+                    "Pluralsight",
+                    "Pluralsight – Hardcore Developer and IT Training" // AB Test Variant
+                };
+            }
         }
 
         public bool IsAtAuthorPage(string authorName)
