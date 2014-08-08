@@ -4,19 +4,13 @@ using TestFramework;
 namespace Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class HomePageTests : TestPage
     {
-        [TestInitialize]
-        public void Setup()
-        {
-            Browser.Initialize();
-        }
-
         [TestMethod]
         public void CanGoToHomePage()
         {
             Pages.HomePage.GoTo();
-            
+
             Assert.IsTrue(Pages.HomePage.IsAt());
         }
 
@@ -25,14 +19,8 @@ namespace Tests
         {
             Pages.HomePage.GoTo();
             Pages.HomePage.SelectAuthor("Matt Milner");
-            
-            Assert.IsTrue(Pages.HomePage.IsAtAuthorPage("Matt Milner"));
-        }
 
-        [TestCleanup]
-        public void CleanUp()
-        {
-            Browser.Close();
+            Assert.IsTrue(Pages.HomePage.IsAtAuthorPage("Matt Milner"));
         }
     }
 }
