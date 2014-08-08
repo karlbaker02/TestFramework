@@ -1,0 +1,8 @@
+C:\Projects\TestFramework\TestFramework\bin\Debug\TestFramework.dll
+C:\Projects\TestFramework\TestFramework\bin\Debug\TestFramework.pdb
+C:\Projects\TestFramework\TestFramework\bin\Debug\WebDriver.dll
+C:\Projects\TestFramework\TestFramework\bin\Debug\WebDriver.Support.dll
+C:\Projects\TestFramework\TestFramework\bin\Debug\WebDriver.xml
+C:\Projects\TestFramework\TestFramework\bin\Debug\WebDriver.Support.xml
+C:\Projects\TestFramework\TestFramework\obj\Debug\TestFramework.dll
+C:\Projects\TestFramework\TestFramework\obj\Debug\TestFramework.pdb
