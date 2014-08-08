@@ -9,7 +9,7 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            Browser.Initialize();
+            Browser.Initialize("http://localhost");
         }
 
         [TestCleanup]

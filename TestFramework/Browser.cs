@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
+using System;
 
 namespace TestFramework
 {
@@ -22,9 +24,18 @@ namespace TestFramework
             _webDriver.Url = url;
         }
 
-        public static void Initialize()
+        public static void Initialize(string seleniumServerUrl = null)
         {
-            _webDriver = new FirefoxDriver();
+            try
+            {
+                _webDriver = !string.IsNullOrEmpty(seleniumServerUrl)
+                    ? new RemoteWebDriver(new Uri(seleniumServerUrl), DesiredCapabilities.Firefox())
+                    : new FirefoxDriver();
+            }
+            catch (WebDriverException)
+            {
+                _webDriver = new FirefoxDriver();
+            }
         }
 
         public static void Close()
